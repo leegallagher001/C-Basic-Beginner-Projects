@@ -25,7 +25,7 @@ int Shapes2D() {
 
    if (selection2D == 1) {
        printf("\n\n");
-       // Square();
+       Square();
    } else if (selection2D == 2) {
        printf("\n\n");
        // Rectangle();
@@ -49,6 +49,38 @@ int Shapes2D() {
        printf("Invalid Selection. Please Try Again: ");
        scanf("%d", &selection2D);
    }
+
+}
+
+int Square() {
+
+    float squareSide;
+
+    printf("Square Side Length: ");
+    scanf("%f", &squareSide);
+
+    printf("\n\n");
+    float squareArea = squareSide * squareSide;
+    printf("Square Area: %.2f\n\n", squareArea);
+
+    printf("1. Calculate Another Square\n");
+    printf("2. Back To 2D Shapes\n\n");
+
+    int squareSelection;
+    printf("Enter Your Selection: ");
+    scanf("%d", &squareSelection);
+
+    if (squareSelection == 1) {
+        printf("\n\n");
+        Square();
+    } else if (squareSelection == 2) {
+        printf("\n\n");
+        Shapes2D();
+    } else {
+        printf("\n\n");
+        printf("Invalid Selection. Please Try Again: ");
+        scanf("%d", &squareSelection);
+    }
 
 }
 
