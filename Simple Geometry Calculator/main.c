@@ -28,13 +28,13 @@ int Shapes2D() {
        Square();
    } else if (selection2D == 2) {
        printf("\n\n");
-       // Rectangle();
+       Rectangle();
    } else if (selection2D == 3) {
        printf("\n\n");
-       // Triangle();
+       Triangle();
    } else if (selection2D == 4) {
        printf("\n\n");
-       // Circle();
+       Circle();
    } else if (selection2D == 5) {
        printf("\n\n");
        // Hexagon();
@@ -61,7 +61,7 @@ int Square() {
 
     printf("\n\n");
     float squareArea = squareSide * squareSide;
-    printf("Square Area: %.2f\n\n", squareArea);
+    printf("Square Area: %.2f", squareArea);
 
     printf("1. Calculate Another Square\n");
     printf("2. Back To 2D Shapes\n\n");
@@ -82,6 +82,108 @@ int Square() {
         scanf("%d", &squareSelection);
     }
 
+}
+
+int Rectangle() {
+
+    float rectangleLength;
+    float rectangleWidth;
+
+    printf("Rectangle Length: ");
+    scanf("%f", &rectangleLength);
+    printf("\n");
+    printf("Rectangle Width: ");
+    scanf("%f", &rectangleWidth);
+
+    printf("\n\n");
+    float rectangleArea = rectangleLength * rectangleWidth;
+    printf("Rectangle Area: %.2f\n\n", rectangleArea);
+
+    printf("1. Calculate Another Rectangle\n");
+    printf("2. Back To 2D Shapes\n\n");
+
+    int rectangleSelection;
+    printf("Enter Your Selection: ");
+    scanf("%d", &rectangleSelection);
+
+    if (rectangleSelection == 1) {
+        printf("\n\n");
+        Rectangle();
+    }  else if (rectangleSelection == 2) {
+        printf("\n\n");
+        Shapes2D();
+    }  else {
+        printf("\n\n");
+        printf("Invalid Selection. Please Try Again: ");
+        scanf("%d", &rectangleSelection);
+    }
+
+}
+
+int Triangle() {
+
+    float triangleBase;
+    float triangleHeight;
+
+    printf("Triangle Base: ");
+    scanf("%f", &triangleBase);
+    printf("\n\n");
+    printf("Triangle Height: ");
+    scanf("%f", &triangleHeight);
+
+    printf("\n\n");
+    float triangleArea = 0.5 * triangleBase * triangleHeight;
+    printf("Triangle Area: %.2f\n\n", triangleArea);
+
+    printf("1. Calculate Another Triangle\n");
+    printf("2. Back To 2D Shapes\n\n");
+
+    int triangleSelection;
+    printf("Enter Your Selection: ");
+    scanf("%d", &triangleSelection);
+
+    if (triangleSelection == 1) {
+        printf("\n\n");
+        Triangle();
+    }  else if (triangleSelection == 2) {
+        printf("\n\n");
+        Shapes2D();
+    }  else {
+        printf("\n\n");
+        printf("Invalid Selection. Please Try Again: ");
+        scanf("%d", &triangleSelection);
+    }
+}
+
+int Circle() {
+    float pi = 3.14;
+    float circleRadius;
+
+    printf("Circle Radius: ");
+    scanf("%f", &circleRadius);
+
+    printf("\n\n");
+    float circleArea = pi * (circleRadius * circleRadius);
+    printf("Circle Area: %.2f\n\n", circleArea);
+
+    printf("1. Calculate Another Circle\n");
+    printf("2. Back To 2D Shapes\n\n");
+
+    int circleSelection;
+    printf("Enter Your Selection: ");
+    scanf("%d", &circleSelection);
+
+    if (circleSelection == 1) {
+        printf("\n\n");
+        Circle();
+    }  else if (circleSelection == 2) {
+        printf("\n\n");
+        Shapes2D();
+    }  else {
+        printf("\n\n");
+        printf("Invalid Selection. Please Try Again: ");
+        scanf("%d", &circleSelection);
+    }
 }
 
 // ----- 3D Shapes ----- //
@@ -106,7 +208,7 @@ int Shapes3D() {
 
     if (selection3D == 1) {
         printf("\n\n");
-        // Cube();
+        Cube();
     } else if (selection3D == 2) {
         printf("\n\n");
         // Cuboid();
@@ -131,6 +233,36 @@ int Shapes3D() {
         scanf("%d", &selection3D);
     }
 
+}
+
+int Cube() {
+    float cubeLength;
+
+    printf("Cube Length: ");
+    scanf("%f", &cubeLength);
+
+    printf("\n\n");
+    float cubeVolume = cubeLength * cubeLength * cubeLength;
+    printf("Cube Volume: %.2f\n\n", cubeVolume);
+
+    printf("1. Calculate Another Cube\n");
+    printf("2. Back To 3D Shapes\n\n");
+
+    int cubeSelection;
+    printf("Enter Your Selection: ");
+    scanf("%d", &cubeSelection);
+
+    if (cubeSelection == 1) {
+        printf("\n\n");
+        Cube();
+    }  else if (cubeSelection == 2) {
+        printf("\n\n");
+        Shapes3D();
+    }  else {
+        printf("\n\n");
+        printf("Invalid Selection. Please Try Again: ");
+        scanf("%d", &cubeSelection);
+    }
 }
 
 // MAIN - program start & main menu
